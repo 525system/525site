@@ -1,0 +1,116 @@
+.soft-eng-1{
+    background:#ff0000;
+    padding: 10px;
+    border:1px solid #ff0000;
+    color:white;
+}
+.soft-eng-2{
+    background:white;
+    border:1px solid #ff0000;
+    padding: 10px;
+    color:#ff0000;
+}
+img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  .software { 
+      background: #ff0000; 
+      color: #ffffff; 
+      display: inline-block; 
+      font-family: 'Lato', sans-serif; 
+      font-size: 12px; 
+      font-weight: bold; 
+      line-height: 12px; 
+      letter-spacing: 1px; 
+      margin: 0 0 30px; 
+      padding: 10px 15px 8px; 
+      text-transform: uppercase; 
+    }
+    .software-red{ 
+        background: #ff0000; 
+        color: #ffffff; 
+        display: inline-block; 
+        font-family: 'Lato', sans-serif; 
+        font-size: 12px; 
+        font-weight: bold; 
+        /* line-height: 12px;  */
+        letter-spacing: 1px; 
+        margin: 0 0 30px; 
+        padding: 10px 15px 8px; 
+        text-transform: uppercase; 
+      }
+      body{
+        font-family: 'Lato', sans-serif;
+        /* background: rgba(0, 110, 255, 0.164); */
+      }
+      @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+$itemSize: 40px;
+
+body {
+    background-color: #222222;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+h2 {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index: -1;
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    width: 300px;
+    height: 10px;
+    top: 60px;
+}
+
+.item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: $itemSize;
+    height: $itemSize;
+    background-color: white;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: $itemSize;
+}
+
+i{
+    font-size: 0.6 * $itemSize;
+    /* color: #222222; */
+}

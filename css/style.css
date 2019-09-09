@@ -226,9 +226,9 @@ ul,li{
 	font-weight:600;
 	border-radius:50px;
 	letter-spacing:1px;
-	background:#ff6288;
+	background:#ff0000;
 	padding:12px 30px 12px;
-	border:2px solid #ff6288;
+	border:2px solid #ff0000;
 	box-shadow:0px 10px 10px rgba(0,0,0,0.20);
 }
 
@@ -248,12 +248,12 @@ ul,li{
 }
 
 .btn-style-two:hover{
-	color:#ff6288;
+	color:#ff0000;
 	background:none;
 }
 
 .btn-style-two:hover .icon{
-	color:#ff6288;
+	color:#ff0000;
 }
 
 /* Btn Style Three */
@@ -315,8 +315,8 @@ ul,li{
 
 .btn-style-four:hover{
 	color:#ffffff;
-	border-color:#ff617d;
-	background:#ff617d;
+	border-color:#ff0000;
+	background:#ff0000;
 }
 
 .theme_color{
@@ -363,8 +363,8 @@ img{
 
 .scroll-to-top:hover{
 	color:#ffffff;
-	background:#ff4c72;
-	border-color:#ff4c72;
+	background:#ff0000;
+	border-color:#ff0000;
 }
 
 /*** 
@@ -741,7 +741,7 @@ img{
 	z-index:100;
 	display:none;
 	background:#f6f6f6;
-	border-top:2px solid #ff4c72;
+	border-top:2px solid #ff0000;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -820,7 +820,7 @@ img{
 	z-index:100;
 	display:none;
 	background:#f6f6f6;
-	border-top:2px solid #ff4c72;
+	border-top:2px solid #ff0000;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -1439,7 +1439,7 @@ img{
 
 .appointment-box .inner-box{
 	position:relative;
-	background-color: #ff4c72;
+	background-color: #ff0000;
 	padding:80px 30px 30px;
 }
 
@@ -2153,7 +2153,7 @@ img{
 .services-block-two .inner-box .content-column .icon-box .icon{
 	position:relative;
 	font-size:54px;
-	color:#ff6288;
+	color:#ff0000;
 	line-height:1em;
 }
 
@@ -2230,7 +2230,7 @@ img{
 .services-block-three .inner-box .content-column .icon-box .icon{
 	position:relative;
 	font-size:54px;
-	color:#ff6288;
+	color:#ff0000;
 	line-height:1em;
 }
 
@@ -3206,7 +3206,7 @@ img{
 }
 
 .price-block:nth-child(4) .inner-box .content-box .title{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 .price-block:nth-child(5) .inner-box .content-box .title{
@@ -3865,7 +3865,7 @@ img{
 
 .fact-counter .counter-column:nth-child(2) .count-outer,
 .fact-counter .counter-column:nth-child(2) .count-outer .count-text{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 .fact-counter .count-outer{
@@ -4042,7 +4042,7 @@ img{
 }
 
 .accordion-box .block:nth-child(2) .icon-outer{
-	color:#ff6288;
+	color:#ff0000;
 }
 
 .accordion-box .block:nth-child(3) .icon-outer{
@@ -4288,7 +4288,7 @@ img{
 }
 
 .download-section-two .clients-column .clients li a:hover{
-	border-color:#ff617d;
+	border-color:#ff0000;
 }
 
 /*** 
@@ -4354,7 +4354,7 @@ img{
 
 .news-block .inner-box .lower-content .time{
 	position:relative;
-	color:#ff617d;
+	color:#ff0000;
 	font-size:13px;
 	line-height:1.3em;
 }
@@ -4380,7 +4380,7 @@ img{
 }
 
 .news-block .inner-box .lower-content h3 a:hover{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 .news-block .inner-box .lower-content .text{
@@ -4451,11 +4451,11 @@ img{
 	text-align:center;
 	line-height:15px;
 	border-radius:50px;
-	background-color:#ff617d;
+	background-color:#ff0000;
 }
 
 .news-block .inner-box .lower-content .likes:hover{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 /* Main Banner Three */
@@ -4708,8 +4708,8 @@ img{
 .faq-page-section .faq-tabs .tab-btns .tab-btn:hover,
 .faq-page-section .faq-tabs .tab-btns .tab-btn.active-btn{
 	color:#ffffff;
-	background:#ff6288;
-	border-color:#ff6288;
+	background:#ff0000;
+	border-color:#ff0000;
 }
 
 .faq-page-section .faq-tabs .tabs-content{
@@ -4864,7 +4864,7 @@ img{
 }
 
 .category-widget ul li a:hover{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 /*Post Widget*/
@@ -4929,14 +4929,14 @@ img{
 
 .sidebar .popular-posts .post a,
 .sidebar .popular-posts .post a:hover{
-	color:#ff4c72;
+	color:#ff0000;
 }
 
 .sidebar .popular-posts .post-info{
 	position:relative;
 	font-size:14px;
 	font-weight:400;
-	color:#ff4c72;
+	color:#ff0000;
 }
 
 /* Tags */
@@ -4961,8 +4961,8 @@ img{
 
 .tags a:hover{
 	color:#ffffff;
-	border-color:#ff617d;
-	background-color:#ff617d;
+	border-color:#ff0000;
+	background-color:#ff0000;
 }
 
 /* Tweet Widget */
@@ -5119,7 +5119,7 @@ img{
 }
 
 .news-block-two .inner-box .image .post-time.style-two{
-	background-color:#ff617d;
+	background-color:#ff0000;
 }
 
 .news-block-two .inner-box .image .post-time.style-three{
@@ -5204,7 +5204,7 @@ img{
 	top:0px;
 	width:56px;
 	height:56px;
-	color:#ff617d;
+	color:#ff0000;
 	font-size:20px;
 	line-height:56px;
 	text-align:center;
@@ -5223,7 +5223,7 @@ img{
 	top:0px;
 	width:56px;
 	height:56px;
-	color:#ff617d;
+	color:#ff0000;
 	font-size:20px;
 	line-height:56px;
 	text-align:center;
@@ -5239,7 +5239,7 @@ img{
 .news-block-two .inner-box .owl-nav .owl-prev:hover,
 .news-block-two .inner-box .owl-nav .owl-next:hover{
 	color:#ffffff;
-	background-color:#ff617d;
+	background-color:#ff0000;
 }
 
 .news-block-two .inner-box .lower-content{
@@ -5266,7 +5266,7 @@ img{
 }
 
 .news-block-two .inner-box .lower-content h3 a:hover{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 .news-block-two .inner-box .lower-content .text{
@@ -5346,11 +5346,11 @@ img{
 	text-align:center;
 	line-height:15px;
 	border-radius:50px;
-	background-color:#ff617d;
+	background-color:#ff0000;
 }
 
 .news-block-two .inner-box .lower-content .likes:hover{
-	color:#ff617d;
+	color:#ff0000;
 }
 
 .news-block-two .inner-box .lower-content .social-icons{
@@ -5396,7 +5396,7 @@ img{
 	position:relative;
 	margin-bottom:24px;
 	z-index: 1;
-    color: #ff617d;
+    color: #ff0000;
     font-size: 14px;
     padding: 9px 18px;
     border-radius: 4px;
@@ -5478,8 +5478,8 @@ img{
 .styled-pagination li a:hover,
 .styled-pagination li a.active{
 	color:#ffffff;
-	border-color:#ff617d;
-	background-color:#ff617d;
+	border-color:#ff0000;
+	background-color:#ff0000;
 }
 
 /* Blog Single */
@@ -5657,7 +5657,7 @@ img{
     text-align: center;
     line-height: 15px;
     border-radius: 50px;
-    background-color: #ff617d;
+    background-color: #ff0000;
 }
 
 .blog-single .inner-box .lower-content .post-share-options .like-box .times{
@@ -5724,7 +5724,7 @@ img{
 }
 
 .sidebar-page-container .comments-area .comment-box:hover{
-	border-color:#ff6288;	
+	border-color:#ff0000;	
 }
 
 .sidebar-page-container .comments-area .comment{
@@ -5785,7 +5785,7 @@ img{
 }
 
 .sidebar-page-container .comments-area .comment-box strong span{
-	color:#ff6288;
+	color:#ff0000;
 	font-size:14px;
 }
 
@@ -6095,7 +6095,7 @@ img{
 
 .info-block .block-inner h3{
 	position:relative;
-	color:#ff617d;
+	color:#ff0000;
 	font-size:18px;
 	font-weight:600;
 	margin-bottom:8px;

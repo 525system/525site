@@ -27,14 +27,14 @@
     <div class="preloader"></div>
  	
     <!-- Main Header-->
-    <header class="main-header header-style-one" style="background:url(images/bg-header.png);background-repeat:no-repeat; border:0px solid">
+    <header class="wow fadeIn-left main-header header-style-one" style="background:url(images/bg-header.png);background-repeat:no-repeat; border:0px solid">
         <!--Header-Upper-->
         <div class="header-upper">
         	<div class="auto-container">
             	<div class="clearfix">
                 	
                 	<div class="pull-left logo-outer">
-                    	<div class="logo"><a href="index.html"><img width="120px" src="images/logo.png" alt="" title=""></a></div>
+                    	<div class="wow fadeIn-left logo"><a href="index.html"><img class="wow fadeIn-left" width="120px" src="images/logo.png" alt="" title=""></a></div>
                     </div>
 					<div class="pull-right upper-right clearfix">
 						<div class="nav-outer clearfix">
@@ -74,6 +74,23 @@
 												<li class="dropdown"><a href="solutions/education.html">Health</a></li>
 												<li class="dropdown"><a href="solutions/education.html">Hotel</a></li>
 												<li class="dropdown"><a href="solutions/education.html">Business</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="services.html">Services</a>
+											<ul>
+												
+												<li class="dropdown"><a href="services/android.html">Android Development</a></li>
+												<li class="dropdown"><a href="services/web.html">Web Development</a></li>
+												<li class="dropdown"><a href="services/graphics.html">Graphics Design</a></li>
+												<li class="dropdown"><a href="services/branding.html">Co-operate Branding</a></li>
+												<li class="dropdown"><a href="services/internet.html">Internet Services</a></li>
+												<li class="dropdown"><a href="services/digital-marketing.html">Digital Marketing</a></li>
+												<li class="dropdown"><a href="services/pos.html">POS Installation</a></li>
+												<li class="dropdown"><a href="services/hardware.html">Hardware Repairs & Maintenance</a></li>
+												<li class="dropdown"><a href="services/networking.html">Computer Networking</a></li>
+												<li class="dropdown"><a href="services/cctv.html">CCTV Installation</a></li>
+											
 											</ul>
 										</li>
 										
@@ -139,7 +156,7 @@
             
             <!--Appointment Form-->
             <div class="appointment-form">
-                <form method="post" action="http://t.commonsupport.com/alfena/contact.html">
+                <form method="post" action="">
 
                     <div class="form-group">
                         <input type="text" name="text" value="" placeholder="Name" required>
@@ -181,7 +198,50 @@
     <div class="center menu">
 		<div id="myMenu"></div>
 	</div>
-    <!--Main Banner-->
+	<!--Main Banner-->
+	<!-- <video autoplay loop muted id="background" style="" poster="images/background.jpg">
+        <source src="images/background.mp4" type="video/mp4" width="50px">
+    </video> -->
+	<section class="screenshots-section" style="">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<h2>App Screen</h2>
+			</div>
+			
+			<!-- Carousel Container -->
+			<div class="carousel-container" >
+				<div class="carousel-outer">
+					<!--Carousel-->
+					<div class="screenshot-carousel owl-carousel owl-theme">
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s1.png" data-fancybox="screenshot" data-caption=""><img src="images/resource/s1.png" alt=""></a></figure></div>
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s2.png" data-fancybox="screenshot" data-caption=""><img src="images/resource/s2.png" alt=""></a></figure></div>
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s3.jpeg" data-fancybox="screenshot" data-caption=""><img src="images/resource/s3.jpeg" alt=""></a></figure></div>
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s6.png" data-fancybox="screenshot" data-caption=""><img src="images/resource/s6.png" alt=""></a></figure></div>
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s5.png" data-fancybox="screenshot" data-caption=""><img src="images/resource/s5.png" alt=""></a></figure></div>
+                        <!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s7.jpg" data-fancybox="screenshot" data-caption=""><img src="images/resource/s7.jpg" alt=""></a></figure></div>
+						<!--Slide-->
+						<div class="slide"><figure class="image"><a href="images/resource/s8.png" data-fancybox="screenshot" data-caption=""><img src="images/resource/s8.png" alt=""></a></figure></div>
+						<!--Slide-->
+						<!-- <div class="slide"><figure class="image"><a href="images/resource/app-screen-3.jpg" data-fancybox="screenshot" data-caption=""><img src="images/resource/app-screen-3.jpg" alt=""></a></figure></div> -->
+						<!--Slide-->
+						<!-- <div class="slide"><figure class="image"><a href="images/resource/app-screen-4.jpg" data-fancybox="screenshot" data-caption=""><img src="images/resource/app-screen-4.jpg" alt=""></a></figure></div> -->
+						<!--Slide-->
+						<!-- <div class="slide"><figure class="image"><a href="images/resource/app-screen-5.jpg" data-fancybox="screenshot" data-caption=""><img src="images/resource/app-screen-5.jpg" alt=""></a></figure></div> -->
+					</div>
+					
+					<!--Mockup Layer-->
+					<div class="mockup-layer"></div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
     <section class="main-banner">
     	<div class="bg-round-layer"></div>
         
@@ -846,6 +906,14 @@
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
 <script src="js/script.js"></script>
-
+<script>
+	$("document").ready(function(){
+  var div = $(".wow fadeIn-left main-header header-style-one");
+  div.animate({height: '300px', opacity: '0.4'}, "slow");
+  div.animate({width: '300px', opacity: '0.8'}, "slow");
+  div.animate({height: '100px', opacity: '0.4'}, "slow");
+  div.animate({width: '100px', opacity: '0.8'}, "slow");
+});
+</script>
 </body>
 </html>

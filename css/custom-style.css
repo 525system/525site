@@ -10,6 +10,9 @@
     padding: 10px;
     color:#ff0000;
 }
+.soft-eng-1:hover{
+    background:white;
+}
 img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;

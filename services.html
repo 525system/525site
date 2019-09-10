@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from t.commonsupport.com/alfena/feature.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Sep 2019 13:51:31 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Alfena Template | Feature</title>
+<title>525system | Services</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -18,6 +16,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style>
+	// mixin
+@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+ /* slanted edges here */
+.edge--bottom {
+  @include angle(after);
+}
+
+.edge--bottom--reverse {
+  @include angle(after, true);
+}
+
+.edge--top {
+  @include angle(before);
+}
+
+.edge--top--reverse {
+  @include angle(before, true);
+}
+
+.edge--both {
+  @include angle(both);
+}
+
+.edge--both--reverse {
+  @include angle(both, true);
+}
+
+.-berry {
+  background: #b52b4a;
+}
+
+.-blue {
+  background: #41ade5
+}
+
+.-orange {
+  background: #de6628;
+}
+
+.-green {
+  background: #5e9b42;
+}
+
+/* demo code below */
+.block {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 0 200px;
+  padding: 20% 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+</style>
 </head>
 
 <body>
@@ -27,17 +163,15 @@
     <div class="preloader"></div>
  	
     <!-- Main Header-->
-    <header class="main-header header-style-one">
-    	
+	<header class="block -berry edge--bottom wow bounce main-header header-style-one" data-wow-delay="0ms" data-wow-duration="3500ms"  style="background:url(images/bg-header.png);background-repeat:no-repeat; border:0px solid">
         <!--Header-Upper-->
         <div class="header-upper">
         	<div class="auto-container">
             	<div class="clearfix">
                 	
                 	<div class="pull-left logo-outer">
-                    	<div class="logo"><a href="index-2.html"><img src="images/logo.png" alt="" title=""></a></div>
+                    	<div class="wow fadeIn-left logo"><a href="index.html"><img class="wow fadeIn-left" width="120px" src="images/logo.png" alt="" title=""></a></div>
                     </div>
-                   	
 					<div class="pull-right upper-right clearfix">
 						<div class="nav-outer clearfix">
 						
@@ -53,38 +187,35 @@
 
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
-										<li class="dropdown"><a href="#">Home</a>
+										<li><a href="#">Home</a>
+											
+										</li>
+										<li><a href="about.html">About us</a>
+											
+										</li>
+										<li class="dropdown">
+											<a href="solutions.html">Solutions</a>
 											<ul>
-												<li><a href="index-2.html">Home 01</a></li>
-												<li><a href="index-3.html">Home 02</a></li>
-												<li class="dropdown"><a href="#">Header Styles</a>
+												<li class="dropdown"><a href="solutions/education.html">Education</a>
 													<ul>
-														<li><a href="index-2.html">Header 01</a></li>
-														<li><a href="index-3.html">Header 02</a></li>
+														<li><a href=""></a>SCH ERP</li>
+														<li><a href=""></a>E-Pin Solution</li>
+														<li><a href=""></a>Registration Portal</li>
+														<li><a href=""></a>E-Library</li>
+														<li><a href=""></a>School Portal</li>
+														<li><a href=""></a>CCTV</li>
+														<li><a href=""></a>Internet Solutions</li>
 													</ul>
 												</li>
+												<li class="dropdown"><a href="solutions/education.html">Health</a></li>
+												<li class="dropdown"><a href="solutions/education.html">Hotel</a></li>
+												<li class="dropdown"><a href="solutions/education.html">Business</a></li>
 											</ul>
 										</li>
-										<li class="dropdown"><a href="#">About us</a>
-											<ul>
-												<li><a href="about.html">About Us</a></li>
-												<li><a href="price.html">pricing</a></li>
-												<li><a href="faq.html">Faq's</a></li>
-											</ul>
-										</li>
-										<li class="current"><a href="feature.html">Features</a></li>
-										<li class="dropdown"><a href="#">Blog</a>
-											<ul>
-												<li><a href="blog-sidebar.html">Blog with sidebar</a></li>
-												<li><a href="blog-masonry.html">Blog masonry</a></li>
-												<li><a href="blog-detail.html">Blog details</a></li>
-												<li><a href="not-found.html">not found</a></li>
-											</ul>
-										</li>
+										
 										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div>
-								
 							</nav>
 							
 							<!-- Main Menu End-->
@@ -108,15 +239,15 @@
 									</div>
 								</div>
 								<!--Language-->
-								<div class="language dropdown"><a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">EN <span class="icon fa fa-caret-down"></span></a>
+								<!-- <div class="language dropdown"><a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">EN <span class="icon fa fa-caret-down"></span></a>
 									<ul class="dropdown-menu style-one" aria-labelledby="dropdownMenu2">
 										<li><a href="#">English</a></li>
 										<li><a href="#">German</a></li>
 										<li><a href="#">Arabic</a></li>
 										<li><a href="#">Hindi</a></li>
 									</ul>
-								</div>
-								<div class="nav-btn"><span class="icon flaticon-menu"></span></div>
+								</div> -->
+								<div class="nav-btn"><span class="fa fa-angle-right"></span></div>
 							</div>
 						</div>
 					</div>
@@ -125,7 +256,7 @@
             </div>
         </div>
         <!--End Header Upper-->
-    
+
     </header>
     <!--End Main Header -->
     
@@ -189,16 +320,19 @@
 			<div class="row clearfix">
             	
                 <!--Content Column-->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class=" wow bounce content-column col-lg-6 col-md-12 col-sm-12">
                 	<div class="inner-column wow slideInLeft">
-                    	<h2>A new way to connect <br> Simple yet Powerful</h2>
-                        <div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</div>
-                    </div>
+                    	<h2 style="color:#ff0000">We have 24Hours Turn around on every project</h2>
+                        <div class="text">The vision of the team is geared towards service delivery with a well mapped out strategy to revolutionize the tech world to meet up with the pace at which the world is evolving. Thus, it’s imperative to succinctly outline the long term goals and measures put in place to achieve actualization..</div>
+						<div class="button-box wow bounce" data-wow-delay="0ms" data-wow-duration="2500ms"><br>
+							<a style="color:#ff0000" href="#" class="theme-btn btn-style-one">Core Value</a>
+						</div>
+					</div>
                 </div>
                 <!--Image Column-->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                 	<div class="image paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.10" data-paroller-factor-sm="0.10" data-paroller-type="foreground" data-paroller-direction="horizontal">
-                    	<img src="images/resource/mokeup-4.png" alt="" />
+                    	<img class="wow bounce" src="images/resource/mokeup-1.png" alt="" />
                     </div>
                 </div>
                 
@@ -223,8 +357,11 @@
 									<div class="service-number">01</div>
 									<span class="icon flaticon-light-bulb"></span>
 								</div>
-								<h3>Ideas</h3>
-								<div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain. operational change management inside of workflows to establish a framework. </div>
+								<h3>Android</h3>
+								<div class="text">Have a dream? allow us make it a reality. We build and scale top notch native apps for both Andriod and iOS platforms.</div>
+							</div>
+							<div class="button-box wow bounce" data-wow-delay="0ms" data-wow-duration="4500ms"><br>
+								<a style="color:#ff0000" href="android.html" class="theme-btn btn-style-one">Learn more <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
 						
@@ -262,9 +399,14 @@
 									<div class="service-number">02</div>
 									<span class="icon flaticon-big-anchor"></span>
 								</div>
-								<h3>Anlysis</h3>
-								<div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely .</div>
-							</div>
+								<h3>Web Development</h3>
+								<div class="text">
+									What's the way forward? In this era of constant advancing technology. We offer web services ranging from simple to advanced web applications.</div>
+									<div class="button-box wow bounce" data-wow-delay="0ms" data-wow-duration="4500ms"><br><br>
+										<a style="color:#ff0000" href="web.html" class="theme-btn btn-style-one">Learn more <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							
 						</div>
 						
 					</div>
@@ -283,9 +425,15 @@
 									<div class="service-number">03</div>
 									<span class="icon flaticon-multiple-users-silhouette"></span>
 								</div>
-								<h3>Integration</h3>
-								<div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximizePodcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the integration.</div>
-							</div>
+								<h3>Graphics Design</h3>
+								<div class="text">“There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for.”
+
+									Let's work with you to communicate your organization goals and objectives to your audience.</div>
+									<div class="button-box wow bounce" data-wow-delay="0ms" data-wow-duration="4500ms"><br>
+										<a style="color:#ff0000" href="graphics.html" class="theme-btn btn-style-one">Learn more <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							
 						</div>
 						
 						<!-- Image Column -->
@@ -322,9 +470,15 @@
 									<div class="service-number">04</div>
 									<span class="icon flaticon-chat-1"></span>
 								</div>
-								<h3>Communication</h3>
-								<div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain.operational change management inside of workflows to establish a framework. </div>
-							</div>
+								<h3>Co-operate branding</h3>
+								<div class="text">
+									
+									Are you a new business in town? or you want to rebrand your existing business, we provide all round services for you .</div>
+									<div class="button-box wow bounce" data-wow-delay="0ms" data-wow-duration="4500ms"><br>
+										<a style="color:#ff0000" href="android.html" class="theme-btn btn-style-one">Learn more <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></a>
+									</div>
+								</div>
+							
 						</div>
 						
 					</div>
@@ -336,17 +490,17 @@
 	<!-- End Services Section Two -->
     
 	<!-- Sponsors Section -->
-	<section class="sponsors-section style-two">
-		<div class="auto-container">
+	<!-- <section class="sponsors-section style-two">
+		<div class="auto-container"> -->
 			<!-- Title Box -->
-			<div class="title-box">
+			<!-- <div class="title-box">
 				<h2>Investors</h2>
 				<div class="title">Indicators offline to maximise the long tail. Keeping your eye on the ball </div>
-			</div>
+			</div> -->
 			
-			<div class="carousel-outer">
+			<!-- <div class="carousel-outer"> -->
                 <!--Sponsors Slider-->
-                <ul class="sponsors-carousel owl-carousel owl-theme">
+                <!-- <ul class="sponsors-carousel owl-carousel owl-theme">
                     <li><div class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></div></li>
                     <li><div class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></div></li>
                     <li><div class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></div></li>
@@ -359,7 +513,7 @@
             </div>
 			
 		</div>
-	</section>
+	</section> -->
 	<!-- End Sponsors Section -->
 	
 	<!-- Download Section -->
@@ -384,7 +538,7 @@
 		<div class="auto-container">
 			<!-- Title Box -->
 			<div class="title-box wow fadeInDown">
-				<h2>Download Alfana today</h2>
+				<h2>Download our Apps</h2>
 				<div class="text">Efficiently unleash cross-media information without cross-media value. Quickly maximizePodcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. </div>
 			</div>
 			<!-- Buttons Box -->
@@ -455,9 +609,9 @@
                     	<div class="footer-widget links-widget">
 							<h2>Address</h2>
 							<ul class="footer-list">
-								<li>(+81) 9876543210</li>
-								<li>example@mail.com</li>
-								<li>North Carolina, USA</li>
+								<li>(+234) 08033376554</li>
+								<li>support@525system.com</li>
+								<li>Calabar, Nigeria</li>
 							</ul>
 						</div>
 					</div>
@@ -471,10 +625,10 @@
 			<div class="auto-container">
 				<!-- Logo -->
 				<div class="logo">
-					<a href="index-2.html"><img src="images/footer-logo.png" alt="" /></a>
+					<a href="index-2.html"><img src="images/logo.png" width="200px" alt="" /></a>
 				</div>
 				<!-- Copyright -->
-				<div class="copyright">Copyright &copy; 2019 Alfena . All Rights Reserved.</div>
+				<div class="copyright">Copyright &copy; 2019 525system.com All Rights Reserved.</div>
 				<!-- Social Nav -->
 				<div class="social-nav">
 					<a href="#"><span class="fa fa-facebook"></span></a>
